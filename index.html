@@ -7,14 +7,29 @@
     <title>Qurious Materials Reference</title>
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="./node_modules/scss/custom.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body style="background-image: url(assets/shrine.jpg); background-size: cover; background-position: center;">
+<body
+    style="background-image: url(assets/shrine.jpg); background-size: auto; background-position: center; background-attachment: fixed;">
 
-    <nav class="navbar bg-body-tertiary navbar-dark bg-dark">
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+            <a class="h4" href="">Index</a>
+            &nbsp;
+            <a class="h4" href="">GranHost</a>
+            &nbsp;
+            <a class="h4" href="">QuriousRef</a>
+        </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1">Qurious Materials Reference</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <span id="header1">Qurious Crafting Reference</span>
         </div>
     </nav>
 
@@ -969,12 +984,25 @@
             </div>
             <br>
         </div>
+    </div>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="function.js"></script>
+
+    <footer class="navbar navbar-dark bg-dark">
+        <div class="container d-flex justify-content-center">
+            <span class="navbar-text text-center">
+                <span>Images/icons used on this website are not made by me and are the property of their
+                    respective
+                    owners.</span>
+                <span><br>All rights reserved.</span>
+                <span><br>Made by : <i class="fa fa-github" style="font-size:20px"></i> <a
+                        href="https://github.com/2gblue/" target="_blank"
+                        style="text-decoration: none; color: gold;">2gblue</a></span>
+            </span>
+        </div>
+    </footer>
 
 
-
-
-        <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-        <script src="function.js"></script>
 </body>
 
 </html>
