@@ -10,16 +10,17 @@
 
 </head>
 
-<body>
+<body style="background-image: url(assets/shrine.jpg); background-size: cover; background-position: center;">
 
     <nav class="navbar bg-body-tertiary navbar-dark bg-dark">
         <div class="container-fluid">
             <span class="navbar-brand mb-0 h1">Qurious Materials Reference</span>
         </div>
     </nav>
-    <br>
+
 
     <div class="container">
+        <br>
         <div class="row mb-3 text-center" id="material-container">
             <div class="col-md-4 themed-grid-col" id="a1" data-bs-toggle="collapse" data-bs-target="#collapseA1"
                 aria-expanded="false" aria-controls="collapseA1">A1★</div>
@@ -271,7 +272,6 @@
                 </div>
             </div>
         </div>
-
         <div class="row mb-3 text-center" id="material-container">
             <div class="col-md-4 themed-grid-col" id="a4" data-bs-toggle="collapse" data-bs-target="#collapseA4"
                 aria-expanded="false" aria-controls="collapseA4">A4★</div>
@@ -704,11 +704,277 @@
                 </div>
             </div>
         </div>
-    </div>
+        <br>
     </div>
 
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <script src="function.js"></script>
+
+    <div class="container">
+        <br>
+        <div class="accordion accordion-container" id="collapse-container">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading1">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1"
+                        aria-expanded="true" aria-controls="collapse1">
+                        Anomaly Slot &nbsp; <img
+                            src="https://monsterhunterrise.wiki.fextralife.com/file/Monster-Hunter-Rise/anomaly_slot_icon_mhrise_wiki_guide.png"
+                            style="height:18px;">
+                    </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1"
+                    data-bs-parent="#collapse-container">
+                    <div class="accordion-body">
+                        <ul class="list-group">
+                            <li class="list-group-item" onclick="anomalySlot(1)">4th Locked Anomaly Slot <b>(Anomaly
+                                    Slot +1)</b></li>
+                            <li class="list-group-item" onclick="anomalySlot(2)">5th Locked Anomaly Slot <b>(Anomaly
+                                    Slot +2)</b></li>
+                            <li class="list-group-item" onclick="anomalySlot(3)">6th Locked Anomaly Slot <b>(Anomaly
+                                    Slot +3)</b></li>
+                            <li class="list-group-item" onclick="anomalySlot(4)">7th Locked Anomaly Slot <b>(Anomaly
+                                    Slot +4)</b></li>
+                            <li class="list-group-item" onclick="anomalySlot(5)">8th Locked Anomaly Slot <b>(Anomaly
+                                    Slot +5)</b></li>
+                            <li class="list-group-item" onclick="anomalySlot(6)">9th Locked Anomaly Slot <b>(Anomaly
+                                    Slot +6)</b></li>
+                            <li class="list-group-item" onclick="anomalySlot(7)">10th Locked Anomaly Slot <b>(Anomaly
+                                    Slot +7)</b></li>
+                        </ul>
+                        <div class="card bg-white" id="output_box">
+                            <div class="card-body d-none" id="anomaly_output_text">
+                                <span id="anomaly_output"> </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                            Attack Boost &nbsp; <img
+                                src="https://monsterhunterrise.wiki.fextralife.com/file/Monster-Hunter-Rise/attack_boost_icon_mhrise_wiki_guide.png"
+                                style="height:18px;">
+                        </button>
+                    </h2>
+                    <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                        data-bs-parent="#collapse-container">
+                        <div class="accordion-body">
+                            <ul class="list-group">
+                                <li class="list-group-item" onclick="attackSlot(1)"><b>Lv. 1</b>: Attack +5</li>
+                                <li class="list-group-item" onclick="attackSlot(2)"><b>Lv. 2</b>: Attack +10</li>
+                                <li class="list-group-item" onclick="attackSlot(3)"><b>Lv. 3</b>: Attack +15</li>
+                                <li class="list-group-item" onclick="attackSlot(4)"><b>Lv. 4</b>: Attack +20</li>
+                            </ul>
+                            <div class="card bg-white" id="output_box">
+                                <div class="card-body d-none" id="attack_output_text">
+                                    <span id="attack_output"> </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                            Affinity Boost &nbsp; <img
+                                src="https://monsterhunterrise.wiki.fextralife.com/file/Monster-Hunter-Rise/affinity_boost_icon_mhrise_wiki_guide.png"
+                                style="height:18px;">
+                        </button>
+                    </h2>
+                    <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                        data-bs-parent="#collapse-container">
+                        <div class="accordion-body">
+                            <ul class="list-group">
+                                <li class="list-group-item" onclick="affinitySlot(1)"><b>Lv. 1</b>: Affinity +5%</li>
+                                <li class="list-group-item" onclick="affinitySlot(2)"><b>Lv. 2</b>: Affinity +10%</li>
+                                <li class="list-group-item" onclick="affinitySlot(3)"><b>Lv. 3</b>: Affinity +15%</li>
+                            </ul>
+                            <div class="card bg-white" id="output_box">
+                                <div class="card-body d-none" id="affinity_output_text">
+                                    <span id="affinity_output"> </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading4">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                            Elemental Boost &nbsp; <img
+                                src="https://monsterhunterrise.wiki.fextralife.com/file/Monster-Hunter-Rise/elemental_boost_icon_mhrise_wiki_guide.png"
+                                style="height:18px;">
+                        </button>
+                    </h2>
+                    <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                        data-bs-parent="#collapse-container">
+                        <div class="accordion-body">
+                            <ul class="list-group">
+                                <li class="list-group-item" onclick="elementalSlot(1)"><b>Lv. 1</b>:
+                                    Element +3 |
+                                    Element +5 (Great Sword, Hammer)</li>
+                                <li class="list-group-item" onclick="elementalSlot(2)"><b>Lv. 2</b>:
+                                    Element +6 |
+                                    Element +10 (Great Sword, Hammer)</li>
+                                <li class="list-group-item" onclick="elementalSlot(3)"><b>Lv. 3</b>:
+                                    Element +9 |
+                                    Element +10 (Lance, Gunlance) |
+                                    Element +15 (Great Sword, Hammer)</li>
+                                <li class="list-group-item" onclick="elementalSlot(4)"><b>Lv. 4</b>:
+                                    Element +12 |
+                                    Element +14 (Lance, Gunlance) |
+                                    Element +20 (Great Sword, Hammer)</li>
+                                <li class="list-group-item" onclick="elementalSlot(5)"><b>Lv. 5</b>:
+                                    Element +15 |
+                                    Element +18 (Lance, Gunlance) |
+                                    Element +25 (Great Sword, Hammer)</li>
+                                <li class="list-group-item" onclick="elementalSlot(6)"><b>Lv. 6</b>:
+                                    Element +20 |
+                                    Element +24 (Lance, Gunlance) |
+                                    Element +33 (Great Sword, Hammer)</li>
+                                <li class="list-group-item" onclick="elementalSlot(7)"><b>Lv. 7</b>:
+                                    Element +27 |
+                                    Element +32 (Lance, Gunlance) |
+                                    Element +43 (Great Sword, Hammer)</li>
+                                <li class="list-group-item" onclick="elementalSlot(8)"><b>Lv. 8</b>:
+                                    Element +35 |
+                                    Element +42 (Lance, Gunlance) |
+                                    Element +55 (Great Sword, Hammer)</li>
+                            </ul>
+                            <div class="card bg-white" id="output_box">
+                                <div class="card-body d-none" id="elemental_output_text">
+                                    <span id="elemental_output"> </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading5">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                            Status Effect Boost &nbsp; <img
+                                src="https://monsterhunterrise.wiki.fextralife.com/file/Monster-Hunter-Rise/status_effect_boos_icon_mhr_wiki_guide35px.png"
+                                style="height:18px;">
+                        </button>
+                    </h2>
+                    <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
+                        data-bs-parent="#collapse-container">
+                        <div class="accordion-body">
+                            <ul class="list-group">
+                                <li class="list-group-item" onclick="statusSlot(1)"><b>Lv. 1</b>: Status +3</li>
+                                <li class="list-group-item" onclick="statusSlot(2)"><b>Lv. 2</b>: Status +8 |
+                                    Status +6 (Bow, Dual Blades) |
+                                    Status +12 (Great Sword)</li>
+                                <li class="list-group-item" onclick="statusSlot(3)"><b>Lv. 3</b>: Status +12 |
+                                    Status +9 (Bow, Dual Blades) |
+                                    Status +18 (Great Sword)</li>
+                                <li class="list-group-item" onclick="statusSlot(4)"><b>Lv. 4</b>: Status +16 |
+                                    Status +12 (Bow, Dual Blades) |
+                                    Status +24 (Great Sword)</li>
+                            </ul>
+                            <div class="card bg-white" id="output_box">
+                                <div class="card-body d-none" id="status_output_text">
+                                    <span id="status_output"> </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading6">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                            Sharpness Boost &nbsp; <img
+                                src="https://monsterhunterrise.wiki.fextralife.com/file/Monster-Hunter-Rise/sharpness_boost_icon_mhrise_wiki_guide.png"
+                                style="height:18px;">
+                        </button>
+                    </h2>
+                    <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6"
+                        data-bs-parent="#collapse-container">
+                        <div class="accordion-body">
+                            <ul class="list-group">
+                                <li class="list-group-item" onclick="sharpnessSlot(1)"><b>Lv. 1</b>: Sharpness +10</li>
+                                <li class="list-group-item" onclick="sharpnessSlot(2)"><b>Lv. 2</b>: Sharpness +20</li>
+                                <li class="list-group-item" onclick="sharpnessSlot(3)"><b>Lv. 3</b>: Sharpness +30</li>
+                                <li class="list-group-item" onclick="sharpnessSlot(4)"><b>Lv. 4</b>: Sharpness +50</li>
+                            </ul>
+                            <div class="card bg-white" id="output_box">
+                                <div class="card-body d-none" id="sharpness_output_text">
+                                    <span id="sharpness_output"> </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading7">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                            Shelling Level Boost &nbsp; <img
+                                src="https://monsterhunterrise.wiki.fextralife.com/file/Monster-Hunter-Rise/shelling_level_boost_icon_mhr_wiki_guide35px.png"
+                                style="height:18px;">
+                        </button>
+                    </h2>
+                    <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7"
+                        data-bs-parent="#collapse-container">
+                        <div class="accordion-body">
+                            <ul class="list-group">
+                                <li class="list-group-item" onclick="shellingSlot(1)"><b>Lv. 1</b>: Shelling Level +1
+                                </li>
+                                <li class="list-group-item" onclick="shellingSlot(2)"><b>Lv. 2</b>: Shelling Level +2
+                                </li>
+                            </ul>
+                            <div class="card bg-white" id="output_box">
+                                <div class="card-body d-none" id="shelling_output_text">
+                                    <span id="shelling_output"> </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading8">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                            Rampage Slot Upgrade &nbsp; <img
+                                src="https://monsterhunterrise.wiki.fextralife.com/file/Monster-Hunter-Rise/rampage_effect_boos_icon_mhr_wiki_guide35px.png"
+                                style="height:18px;">
+                        </button>
+                    </h2>
+                    <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8"
+                        data-bs-parent="#collapse-container">
+                        <div class="accordion-body">
+                            <ul class="list-group">
+                                <li class="list-group-item" onclick="rampageSlot(1)"><b>Lv. 1</b>: Rampage Slot Level
+                                    +1</li>
+                                <li class="list-group-item" onclick="rampageSlot(2)"><b>Lv. 2</b>: Rampage Slot Level
+                                    +2</li>
+                            </ul>
+                            <div class="card bg-white" id="output_box">
+                                <div class="card-body d-none" id="rampage_output_text">
+                                    <span id="rampage_output"> </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+
+
+
+
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script src="function.js"></script>
 </body>
 
 </html>
